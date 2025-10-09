@@ -1,3 +1,6 @@
+body {
+  overflow-x: hidden;
+}
 
 /* header styling */
 .header_style{
@@ -5,46 +8,45 @@
      height: 90px;
      text-align: center;
      display:flex;
-     align-items: center; 
+     justify-content: center;
+     align-items: center;
 }
 
 .header_style img{
      height:80px;
      width:auto;
-     position: absolute;
+     display: flex;
+     /* position: absolute;
      left: 50%;
-     transform: translateX(-50%);
+     transform: translateX(-50%); */
 }
 
-.menu{
-     color: white;
-     font-size: 2em;
-     float: left;
-     margin-left: 20px;
-     cursor: pointer;
-}
 
 /* navigation style */
 .nav_style{
      background-color: #f1c411;
-     height: 40px;
+     height: auto;
 }
 
 
 .nav_style ul{
-     display: flex;
-     gap: 10px;
-     padding-left: 10px;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
 }
 
 
 .nav_item {
-     padding: 10px 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding: 5px 0;
 }
 
 .nav_item a {
      display: inline-block;
      color: black;
+     font-size: 0.9rem;
 }
 
 
@@ -61,7 +63,61 @@
 }
 
 
+/* text size styling */
+h1{
+     font-size: 1.8em;
+}
+h2{
+     font-size: 1.2em;
+}
 
+p{
+     text-align: justify;
+}
+.container{
+     display:grid;
+     grid-template-columns: repeat(2, minmax(100px, 390px));
+}
+.section_container{
+     padding: 20px;
+     grid-column: span 2;
+     border-bottom: 2px solid #e0e0e0;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* height: auto doesn't work with iframe, it will not automactically calculate height like img */
+  aspect-ratio: 16 / 9;
+  padding-top: 10px;
+}
+
+.section_container ul{
+     list-style-position: inside;;
+     padding-left: 10px;
+}
+
+.offer_image img{
+     max-width: 100%;
+     height: auto;
+     margin: 5px 0;
+}
+
+.career_education_table{
+     border-collapse: collapse;
+     width: 100%;
+     text-align: left;
+}
+
+.career_education_table .career_education_table th, .career_education_table td{
+     border: 1px solid black;
+     padding: 5px;
+}
+
+.table_style td{
+     font-size: 16px;
+}
 
 /*Write selector/rule property to style all elements when in focus*/
 /* :focus {
