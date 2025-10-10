@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/starter_style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Resumes</title>
 </head>
 <body>
-
-  <header >
-    <div style="background-color: #03284c; position: relative; height: 90px; text-align: center;">
-      <a href="index.html" style="color: white; position: absolute; left: 0; bottom: 0;padding: 8px; text-decoration: none;">Skip to Main Content</a>
-      <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" style="height:80px; width:auto; text-align: center;">
+  <div class="skip"><a href="#main">Skip to Main Content</a></div>
+  <header>
+    <div class="header_style">
+      <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" >
     </div>
-    <nav style=" background-color: #f1c411;height: 40px; ">
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 0; width: 100%;  ">
-        <li style="flex: 1; text-align: center;"><a href="index.html" style="display: block; padding: 10px 0;">Home</a></li>
-        <li style="flex: 1; text-align: center;"><a href="resume.html" style="display: block; padding: 10px 0;">Resumes</a></li>
-        <li style="flex: 1; text-align: center;"><a href="networking.html" style="display: block; padding: 10px 0;">Networking & Connections</a></li>
-        <li style="flex: 1; text-align: center;"><a href="job_search.html" style="display: block; padding: 10px 0;">Job/Internship Search</a></li>
+    <nav class="nav_style">
+      <ul>
+        <li class="nav_item"><a href="index.html">Home</a></li>
+        <li class="nav_item"><a href="resume.html">Resumes</a></li>
+        <li class="nav_item"><a href="networking.html">Networking & Connections</a></li>
+        <li class="nav_item"><a href="job_search.html">Job/Internship Search</a></li>
       </ul>
     </nav>
-  <h1>Resume Resources for UMSI Students</h1>
   </header>
+  
 
-  <main>
-
-    <section>
-      <!-- Image source: Unsplash (https://unsplash.com/photos/white-printer-paper-beside-silver-laptop-computer-7iSEHWsxPLw) -->
+  <main class="container" id = "main">
+    <section class="section_container">
+        <h1>Resume Resources for UMSI Students</h1>
+        <!-- Image source: Unsplash (https://unsplash.com/photos/white-printer-paper-beside-silver-laptop-computer-7iSEHWsxPLw) -->
       <img src="images/resume.jpg" alt="a resume image with laptop"  style="margin: 0 0 10px 10px; height:300px; width:auto">
       <h2>Craft a Resume that Tells Your Story</h2>
       <p>
@@ -48,15 +52,17 @@
           <a href="#resources">Resume Resources</a>
         </li>
         <li>
-          <a href="#timeline">Resume Timeline Guidance for Master’s Students</a>
+          <a href="#timeline">Resume Timeline Guidance for Grad Students</a>
         </li>
         <li> 
           <a href="#FAQ">Resume FAQ</a>
         </li>
       </ul>
+      </div>
+      
     </section>
 
-    <section id="steps" style="border-top: 2px solid #e0e0e0;">
+    <section class="section_container" id="steps">
       <h2>Resume Writing Made Easy: Steps to Success</h2>
       <ol>
         <li><strong>Download a UMSI-Approved Template:</strong> Start with a format that works—no need to design from scratch.</li>
@@ -67,7 +73,7 @@
       </ol>
     </section>
 
-    <section id="resources" style="border-top: 2px solid #e0e0e0;">
+    <section class="section_container" id="resources">
       <h2>Resume Resources</h2>
       <ul>
         <li>
@@ -106,7 +112,7 @@
       </p>
     </section>
 
-    <section id="timeline" style="border-top: 2px solid #e0e0e0;">
+    <section class="section_container" id="timeline">
       <h2>Resume Timeline Guidance for Master’s Students</h2>
       <!-- Image source: Unsplash (https://unsplash.com/photos/a-calendar-with-red-push-buttons-pinned-to-it-bwOAixLG0uc) -->
       <img src="images/calender.jpg" alt="Calendar with red push pins" style="height:300px; width:auto">
@@ -138,7 +144,7 @@
       <p>Pro Tip: Treat your resume as a living document—update it every semester, after every major project, and after every new role.</p>
     </section>
 
-    <section id="FAQ" style="border-top: 2px solid #e0e0e0;">
+    <section class="section_container" id="FAQ">
       <h2>Resume FAQ</h2>
       <ul>
         <li>
@@ -161,30 +167,27 @@
     </section>
   </main>
 
-  <footer style="background: #f4f4f4; border-bottom: 6px solid #f1c411; padding: 32px 0 0 0; margin-top: 48px;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; max-width: 1200px; margin: 0 auto; padding: 0 32px;">
-    <!-- Left: Logo -->
-    <div style="flex: 1 1 220px; min-width: 220px; ">
-      <img src="images/UMSI_signature_vertical_U_blue.png" alt="University of Michigan School of Information logo" style="max-width: 180px; height: auto;">
-    </div>
-    <!-- Center: Copyright & Address -->
-    <div style="flex: 2 1 320px; min-width: 260px; text-align: left;">
-      <div style="font-size: 1.1em; margin-bottom: 6px;">
-        &copy; Copyright 2025 Regents of the University of Michigan
-      </div>
-      <div style="line-height: 1.5; margin-bottom: 20px ;">
-        <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a><br>
-        School of Information<br>
-        University of Michigan<br>
-        2200 Hayward Street<br>
-        Ann Arbor, MI 48109<br>
-        <a href="mailto:539Instructors@umich.edu" style="color: #185abc; text-decoration: none; margin-right: 12px;">Contact Us</a> |
-        <a href="https://umich.edu/privacy/" style="color: #185abc; text-decoration: none; margin-left: 12px;">Privacy Statement</a>
-      </div>
-    </div>
-  </div>
+  <footer class="footer_container">
+        <!-- Left: Logo -->
+        <div class ="footer_logo">
+          <img src="images/UMSI_signature_vertical_U_blue.png" alt="University of Michigan School of Information logo" style="max-width: 180px; height: auto;">
+          <p>
+            &copy; Copyright 2025 Regents of the University of Michigan
+          </p>
+        </div>
+        <!-- Center: Copyright & Address -->
+        <div class="footer_info">
+            <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a><br>
+            School of Information<br>
+            University of Michigan<br>
+            2200 Hayward Street<br>
+            Ann Arbor, MI 48109<br>
+            <a class="contact" href="mailto:539Instructors@umich.edu">Contact Us</a> |
+            <a class="privacy" href="https://umich.edu/privacy/" style="color: #185abc; text-decoration: none; margin-left: 12px;">Privacy Statement</a>
+          </div>
+        </div>
   </footer>
-    
+
 </body>
 
 </html>

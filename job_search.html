@@ -3,76 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/starter_style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Job &amp; Internship Search</title>
 </head>
 <body>
-
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <header >
-        <div style="background-color: #03284c; position: relative; height: 90px; text-align: center;">
-        <a href="index.html" style="color: white; position: absolute; left: 0; bottom: 0;padding: 8px; text-decoration: none;">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" style="height:80px; width:auto; text-align: center;">
+        <div class="header_style">
+            <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" >
         </div>
-        <nav style=" background-color: #f1c411;height: 40px; ">
-        <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 0; width: 100%;  ">
-            <li style="flex: 1; text-align: center;"><a href="index.html" style="display: block; padding: 10px 0;">Home</a></li>
-            <li style="flex: 1; text-align: center;"><a href="resume.html" style="display: block; padding: 10px 0;">Resumes</a></li>
-            <li style="flex: 1; text-align: center;"><a href="networking.html" style="display: block; padding: 10px 0;">Networking & Connections</a></li>
-            <li style="flex: 1; text-align: center;"><a href="job_search.html" style="display: block; padding: 10px 0;">Job/Internship Search</a></li>
-        </ul>
+        <nav class="nav_style">
+            <ul>
+            <li class="nav_item"><a href="index.html">Home</a></li>
+            <li class="nav_item"><a href="resume.html">Resumes</a></li>
+            <li class="nav_item"><a href="networking.html">Networking & Connections</a></li>
+            <li class="nav_item"><a href="job_search.html">Job/Internship Search</a></li>
+            </ul>
         </nav>
-
-        <h1>Job &amp; Internship Search</h1>
-        <p>
-        Finding the right job or internship takes planning, preparation, and the right tools.
-        Use this page to learn how to structure your search, discover where to find opportunities,
-        and access resources to make the process easier and more effective.
-        </p>
-
-        <p>
-        For a more complete and detailed set of job and internship search resources&mdash;including
-        workshop slides, handouts, and planning templates&mdash;please visit our
-        <a href="https://umich.instructure.com/courses/137916/modules#module_218605" target="_blank">Career Exploration and Job/Internship Search module</a>.
-        </p>
-        <img src="images/UMSI_CareerFair_1.jpg" alt="Students networking at a UMSI career fair" style="height:400px; width:auto">
-        <ul>
-        <li><a href="#plan-search">How to Plan Your Job/Internship Search</a></li>
-        <li><a href="#where-to-find-jobs">Where to Find Jobs</a></li>
-        <li><a href="#intl-students">Job Hunting for International Students</a></li>
-        </ul>
     </header>
 
-    <main>
-        <!-- ============= How to Plan ============= -->
-        <section id="plan-search">
-        <h2>1) How to Plan Your Job/Internship Search</h2>
-        <p>
-            Start with a strategy. Define your goals, map a timeline, prepare materials, and track your
-            progress. Focus beats volume—target roles, industries, and locations that fit your skills and values.
-        </p>
 
-        <h3>Core Steps</h3>
-        <ol>
-            <li><strong>Set your direction:</strong> role(s), industry, location, and constraints (e.g., timeline, visa).</li>
-            <li><strong>Build your targets:</strong> make a company list (use a LAMP list if helpful) and prioritize outreach.</li>
-            <li><strong>Ready your materials:</strong> resume, LinkedIn, portfolio/GitHub, and a 30-second pitch.</li>
-            <li><strong>Schedule your search:</strong> block weekly time for applications + networking.</li>
-            <li><strong>Track everything:</strong> keep a spreadsheet or use CareerLink to log postings, contacts, and follow-ups.</li>
-            <li><strong>Iterate weekly:</strong> review results, refine targets, and ask a CDO coach for feedback.</li>
-        </ol>
+    <main class="container" id = "main">
+        <section class="section_container">
+            <h1>Job &amp; Internship Search</h1>
+            <p>
+            Finding the right job or internship takes planning, preparation, and the right tools.
+            Use this page to learn how to structure your search, discover where to find opportunities,
+            and access resources to make the process easier and more effective.
+            </p>
 
-        <h3>Helpful Planning Resources (Canvas/CDO)</h3>
-        <ul>
-            <li><a href="https://docs.google.com/spreadsheets/d/1fT4YeP1M5moXtFYniTkyb-CCLV7PZ75B9iJFH-XWMv4/edit?gid=1589706144#gid=1589706144" target="_blank">Job Search Plan &amp; Application Tracker (template)</a></li>
-            <li><a href="https://docs.google.com/document/d/14Q3v3K5_SwgIAbkhCgyX9Vd3JPs9nR245ACvP3Csq5I/edit?tab=t.0" target="_blank">Recruiting Timeline</a></li>
-            <li><a href="https://docs.google.com/document/d/1fblfjC2Tki2MZOminwoIonvJYJ5tiBTKP8isaCzaIfY/edit?tab=t.0#heading=h.gjdgxs" target="_blank">Job &amp; Internship Search Checklist</a></li>
-            <li><a href="https://docs.google.com/document/d/1_Mh2N-azjpH-WAf0Z6T51D6ag5ciYw4HpNwc0T6j_rM/edit?tab=t.0" target="_blank">Strategic Job &amp; Internship Plan</a></li>
-        </ul>
+            <p>
+            For a more complete and detailed set of job and internship search resources&mdash;including
+            workshop slides, handouts, and planning templates&mdash;please visit our
+            <a href="https://umich.instructure.com/courses/137916/modules#module_218605" target="_blank">Career Exploration and Job/Internship Search module</a>.
+            </p>
+            <img src="images/UMSI_CareerFair_1.jpg" alt="Students networking at a UMSI career fair" >
+            <ul>
+            <li><a href="#plan-search">How to Plan Your Job/Internship Search</a></li>
+            <li><a href="#where-to-find-jobs">Where to Find Jobs</a></li>
+            <li><a href="#intl-students">Job Hunting for International Students</a></li>
+            </ul>
         </section>
 
-        <hr>
+
+        <!-- ============= How to Plan ============= -->
+        <section class="section_container" id="plan-search">
+            <h2>1) How to Plan Your Job/Internship Search</h2>
+            <p>
+                Start with a strategy. Define your goals, map a timeline, prepare materials, and track your
+                progress. Focus beats volume—target roles, industries, and locations that fit your skills and values.
+            </p>
+
+            <h3>Core Steps</h3>
+            <ol>
+                <li><strong>Set your direction:</strong> role(s), industry, location, and constraints (e.g., timeline, visa).</li>
+                <li><strong>Build your targets:</strong> make a company list (use a LAMP list if helpful) and prioritize outreach.</li>
+                <li><strong>Ready your materials:</strong> resume, LinkedIn, portfolio/GitHub, and a 30-second pitch.</li>
+                <li><strong>Schedule your search:</strong> block weekly time for applications + networking.</li>
+                <li><strong>Track everything:</strong> keep a spreadsheet or use CareerLink to log postings, contacts, and follow-ups.</li>
+                <li><strong>Iterate weekly:</strong> review results, refine targets, and ask a CDO coach for feedback.</li>
+            </ol>
+
+            <h3>Helpful Planning Resources (Canvas/CDO)</h3>
+            <ul>
+                <li><a href="https://docs.google.com/spreadsheets/d/1fT4YeP1M5moXtFYniTkyb-CCLV7PZ75B9iJFH-XWMv4/edit?gid=1589706144#gid=1589706144" target="_blank">Job Search Plan &amp; Application Tracker</a></li>
+                <li><a href="https://docs.google.com/document/d/14Q3v3K5_SwgIAbkhCgyX9Vd3JPs9nR245ACvP3Csq5I/edit?tab=t.0" target="_blank">Recruiting Timeline</a></li>
+                <li><a href="https://docs.google.com/document/d/1fblfjC2Tki2MZOminwoIonvJYJ5tiBTKP8isaCzaIfY/edit?tab=t.0#heading=h.gjdgxs" target="_blank">Job &amp; Internship Search Checklist</a></li>
+                <li><a href="https://docs.google.com/document/d/1_Mh2N-azjpH-WAf0Z6T51D6ag5ciYw4HpNwc0T6j_rM/edit?tab=t.0" target="_blank">Strategic Job &amp; Internship Plan</a></li>
+            </ul>
+        </section>
+
+
 
         <!-- ============= Where to Find Jobs ============= -->
-        <section id="where-to-find-jobs">
+        <section class="section_container" id="where-to-find-jobs">
         <h2 >2) Where to Find Jobs &amp; Internships</h2>
         <p>
             Combine UMSI-exclusive postings with broader platforms and industry-specific boards. Don’t
@@ -118,11 +126,10 @@
         For more information, please visit our <a href="https://docs.google.com/document/d/1cQybKz6QKjBNAhrowpeiXdb-7npnRBiWLQde6re-wOo/edit?tab=t.0" target="_blank">Searching for Part-Time and/or On-Campus Jobs</a> handout.
         <p><strong>If you have an immediate need or you have any trouble accessing any of these links or resources, please email 539Instructors@umich.edu</strong></p>
         </section>
-        
-        <hr>
+
 
         <!-- ============= Section 3: International Students ============= -->
-        <section id="intl-students">
+        <section class="section_container" id="intl-students">
         <h2>3) Job Hunting for International Students</h2>
         <p>
             International students can absolutely succeed in the U.S. market—just pair a strong search plan
@@ -158,30 +165,26 @@
         </section>
 
     </main>
-    <footer style="background: #f4f4f4; border-bottom: 6px solid #f1c411; padding: 32px 0 0 0; margin-top: 48px;">
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; max-width: 1200px; margin: 0 auto; padding: 0 32px;">
+    <footer class="footer_container">
         <!-- Left: Logo -->
-        <div style="flex: 1 1 220px; min-width: 220px; ">
-            <img src="images/UMSI_signature_vertical_U_blue.png" alt="University of Michigan School of Information logo" style="max-width: 180px; height: auto;">
+        <div class ="footer_logo">
+          <img src="images/UMSI_signature_vertical_U_blue.png" alt="University of Michigan School of Information logo" style="max-width: 180px; height: auto;">
+          <p>
+            &copy; Copyright 2025 Regents of the University of Michigan
+          </p>
         </div>
         <!-- Center: Copyright & Address -->
-        <div style="flex: 2 1 320px; min-width: 260px; text-align: left;">
-            <div style="font-size: 1.1em; margin-bottom: 6px;">
-            &copy; Copyright 2025 Regents of the University of Michigan
-            </div>
-            <div style="line-height: 1.5; margin-bottom: 20px ;">
+        <div class="footer_info">
             <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a><br>
             School of Information<br>
             University of Michigan<br>
             2200 Hayward Street<br>
             Ann Arbor, MI 48109<br>
-            <a href="mailto:539Instructors@umich.edu" style="color: #185abc; text-decoration: none; margin-right: 12px;">Contact Us</a> |
-            <a href="https://umich.edu/privacy/" style="color: #185abc; text-decoration: none; margin-left: 12px;">Privacy Statement</a>
-            </div>
-        </div>
+            <a class="contact" href="mailto:539Instructors@umich.edu">Contact Us</a> |
+            <a class="privacy" href="https://umich.edu/privacy/" style="color: #185abc; text-decoration: none; margin-left: 12px;">Privacy Statement</a>
+          </div>
         </div>
     </footer>
-    
 </body>
 
 </html>
