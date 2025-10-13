@@ -46,7 +46,7 @@ body {
 .nav_item a {
      display: inline-block;
      color: black;
-     font-size: 0.9rem;
+     font-size: 1rem;
 }
 
 
@@ -73,13 +73,17 @@ h1{
 h2{
      font-size: 1.2em;
      line-height: 1.1;
-     margin-bottom: 5px;
+     margin-bottom: 10px;
 }
 
 h3{
      font-size: 1.1em;
      line-height: 1.1;
-     margin-bottom: 5px;
+     margin-bottom: 10px;
+}
+
+h4 + a{
+     margin-bottom: 30px;
 }
 
 p{
@@ -104,28 +108,36 @@ iframe {
   aspect-ratio: 16 / 9;
   padding-top: 10px;
 }
+.section_container div{
+     margin-bottom: 20px;
+}
 
 .section_container ul{
-     list-style-position: inside;;
+     list-style-position: inside;
      padding-left: 10px;
      margin-bottom: 10px;
 }
 
 .section_container ol{
-     list-style-position: inside;;
+     list-style-position: inside;
      padding-left: 10px;
      margin-bottom: 10px;
 }
 .section_container li{
-     list-style-position: inside;;
+     list-style-position: inside;
      padding-left: 10px;
      margin-bottom: 10px;
 }
+
 
 .section_container img{
      max-width: 100%;
      height: auto;
      margin: 5px 0;
+}
+
+.section_container span{
+     font-weight: bold;
 }
 
 .offer_image img{
@@ -182,12 +194,22 @@ iframe {
      font-size: 0.8rem;
 }
 
+footer img{
+     max-width: 140px; 
+     height: auto;
+}
+
 .contact{
      color: #185abc;
      text-decoration: none;
      margin-right: 3px;
 }
 
+.privacy{
+     color: #185abc;
+     text-decoration: none;
+     margin-right: 12px;
+}
 /*Write selector/rule property to style all elements when in focus*/
 /* :focus {
      border: 5px dashed green;
