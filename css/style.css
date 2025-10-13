@@ -4,6 +4,7 @@ body {
 :focus {
      border: 2px dashed rgb(30, 45, 255);
 }
+
 /* header styling */
 .header_style{
      background-color: #03284c;
@@ -109,7 +110,9 @@ iframe {
   /* height: auto doesn't work with iframe, it will not automactically calculate height like img */
   aspect-ratio: 16 / 9;
   padding-top: 10px;
+  border: none;
 }
+
 .section_container div{
      margin-bottom: 10px;
 }
