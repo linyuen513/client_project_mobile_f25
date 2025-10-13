@@ -1,7 +1,9 @@
 body {
   overflow-x: hidden;
 }
-
+:focus {
+     border: 2px dashed rgb(30, 45, 255);
+}
 /* header styling */
 .header_style{
      background-color: #03284c;
@@ -109,7 +111,7 @@ iframe {
   padding-top: 10px;
 }
 .section_container div{
-     margin-bottom: 20px;
+     margin-bottom: 10px;
 }
 
 .section_container ul{
