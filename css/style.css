@@ -90,9 +90,11 @@ li {
   letter-spacing: -0.01em;
 }
 
-/* a{
-  color: inherit;
-} */
+nav a.active {
+  background-color: #ffcb05;
+  color: #03284c;
+  border-radius: 10px;
+}
 
 :focus {
   border: 2px dashed rgb(30, 45, 255);
