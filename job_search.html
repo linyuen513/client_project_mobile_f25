@@ -1,218 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/html5reset.css">
-    <link rel="stylesheet" href="css/starter_style.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>Job &amp; Internship Search</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/html5reset.css" />
+    <link rel="stylesheet" href="css/starter_style.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MSI Career Development Resource Hub</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <header >
-        <div class="header_style">
-            <a href="home.html"><img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" ></a>
-        </div>
-        <nav class="nav_style">
-            <ul>
-            <li class="nav_item"><a href="home.html">Home</a></li>
-            <li class="nav_item"><a href="resume.html">Resumes</a></li>
-            <li class="nav_item"><a href="networking.html">Networking & Connections</a></li>
-            <li class="nav_item"><a href="job_search.html">Job/Internship Search</a></li>
-            </ul>
+    <header>
+      <div class="header">
+        <!-- menu -->
+        <button id="open-sidebar-button" onclick="openSidebar()">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+        <!-- logo -->
+        <a href="home.html" class="logo">
+          <!-- <img
+            src="images/UMSI_signature_vertical_informal_solidblue.jpg"
+            alt="UMSI Logo"
+          /> -->
+          <picture>
+            <!-- 桌機版：螢幕寬度 >= 900px 時使用 -->
+            <source
+              media="(min-width: 1000px)"
+              srcset="images/UMSI_signature_marketing_U_white.png"
+            />
+
+            <!-- 手機版：預設顯示 -->
+            <img
+              src="images/UMSI_signature_vertical_informal_solidblue.jpg"
+              alt="UMSI Logo"
+            />
+          </picture>
+        </a>
+
+        <!-- nav -->
+        <nav id="navbar">
+          <ul>
+            <li>
+              <button id="close-sidebar-button" onclick="closeSidebar()">
+                <span class="material-symbols-rounded">close</span>
+              </button>
+            </li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="resume.html">Resumes</a></li>
+            <li><a href="networking.html">Networking & Connections</a></li>
+            <li class="">
+              <a href="job_search.html">Job/Internship Search</a>
+            </li>
+          </ul>
         </nav>
+      </div>
     </header>
 
-
-    <main class="container" id = "main">
-        <section class="section_container" tabindex="0">
-            <h1>Job &amp; Internship Search</h1>
-            <div>
-                <p>
-                Finding the right job or internship takes planning, preparation, and the right tools.
-                Use this page to learn how to structure your search, discover where to find opportunities,
-                and access resources to make the process easier and more effective.
-                </p>
-
-                <p>
-                For a more complete and detailed set of job and internship search resources&mdash;including
-                workshop slides, handouts, and planning templates&mdash;please visit our
-                <a href="https://umich.instructure.com/courses/137916/modules#module_218605" target="_blank">Career Exploration and Job/Internship Search module</a>.
-                </p>
-                <img src="images/UMSI_CareerFair_1.jpg" alt="Students networking at a UMSI career fair" >
-
-                <div>
-                    <ul>
-                    <li><a href="#plan-search">How to Plan Your Job/Internship Search</a></li>
-                    <li><a href="#where-to-find-jobs">Where to Find Jobs</a></li>
-                    <li><a href="#intl-students">Job Hunting for International Students</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ============= How to Plan ============= -->
-        <section class="section_container" id="plan-search" tabindex="0">
-            <div>
-                <h2>1) How to Plan Your Job/Internship Search</h2>
-                <p>
-                    Start with a strategy. Define your goals, map a timeline, prepare materials, and track your
-                    progress. Focus beats volume—target roles, industries, and locations that fit your skills and values.
-                </p>
-            </div>
-            <div>
-                <h3>Core Steps</h3>
-                <ol>
-                    <li><strong>Set your direction:</strong> role(s), industry, location, and constraints (e.g., timeline, visa).</li>
-                    <li><strong>Build your targets:</strong> make a company list (use a LAMP list if helpful) and prioritize outreach.</li>
-                    <li><strong>Ready your materials:</strong> resume, LinkedIn, portfolio/GitHub, and a 30-second pitch.</li>
-                    <li><strong>Schedule your search:</strong> block weekly time for applications + networking.</li>
-                    <li><strong>Track everything:</strong> keep a spreadsheet or use CareerLink to log postings, contacts, and follow-ups.</li>
-                    <li><strong>Iterate weekly:</strong> review results, refine targets, and ask a CDO coach for feedback.</li>
-                </ol>
-            </div>
-
-            <div>
-                <h3>Helpful Planning Resources (Canvas/CDO)</h3>
-                <ul>
-                    <li><a href="https://docs.google.com/spreadsheets/d/1fT4YeP1M5moXtFYniTkyb-CCLV7PZ75B9iJFH-XWMv4/edit?gid=1589706144#gid=1589706144" target="_blank">Job Search Plan &amp; Application Tracker</a></li>
-                    <li><a href="https://docs.google.com/document/d/14Q3v3K5_SwgIAbkhCgyX9Vd3JPs9nR245ACvP3Csq5I/edit?tab=t.0" target="_blank">Recruiting Timeline</a></li>
-                    <li><a href="https://docs.google.com/document/d/1fblfjC2Tki2MZOminwoIonvJYJ5tiBTKP8isaCzaIfY/edit?tab=t.0#heading=h.gjdgxs" target="_blank">Job &amp; Internship Search Checklist</a></li>
-                    <li><a href="https://docs.google.com/document/d/1_Mh2N-azjpH-WAf0Z6T51D6ag5ciYw4HpNwc0T6j_rM/edit?tab=t.0" target="_blank">Strategic Job &amp; Internship Plan</a></li>
-                </ul>
-            </div>
-        </section>
-
-
-
-        <!-- ============= Where to Find Jobs ============= -->
-        <section class="section_container" id="where-to-find-jobs" tabindex="0">
-            <div>
-                <h2 >2) Where to Find Jobs &amp; Internships</h2>
-            <p>
-                Combine UMSI-exclusive postings with broader platforms and industry-specific boards. Don’t
-                forget on-campus roles and micro-internships to build experience.
-                For more information, visit our <a href="https://umich.instructure.com/courses/137916/pages/searching-for-job-and-slash-or-internship-postings" target="_blank">Searching for Job and/or Internship Postings</a> canvas page.
-            </p>
-            </div>
-        
-            <div>
-                <h3>UMSI / U-M Platforms</h3>
-                <ul>
-                    <li><a href="https://si-umich.12twenty.com/Login" target="_blank">UMSI CareerLink</a> – exclusive postings, employer events, and on-campus recruiting.</li>
-                    <li><a href="https://careercenter.umich.edu/content/introducing-handshake" target="_blank">Handshake</a> – U-M student jobs/internships across campus and beyond.</li>
-                    <li><a href="https://careers.umich.edu/" target="_blank">U-M Careers</a> – The official site for U-M student employment, offering roles across departments, research labs, and administrative offices.</li>
-                    <li><a href="https://studentemployment.umich.edu/" target="_blank">Student Employment Site</a>, <a href="https://its.umich.edu/student-jobs/" target="_blank">ITS Student Roles</a>, <a href="https://ai.umich.edu/students" target="_blank">CAI Student Roles</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>Large Job Boards</h3>
-                <ul>
-                    <li><a href="https://www.linkedin.com/home" target="_blank">LinkedIn Jobs</a></li>
-                    <li><a href="https://www.indeed.com/" target="_blank">Indeed</a></li>
-                    <li><a href="https://www.google.com/search?q=jobs+near+me&ibp=htl;jobs&sa=X&ved=2ahUKEwj867rGg8qGAxW8vokEHYB3N5AQutcGKAF6BAgbEAQ#htivrt=jobs&htidocid=ZbnOLw9I22qRm3pLAAAAAA%3D%3D&fpstate=tldetail" target="_blank">Google Jobs</a></li>
-                    <li><a href="https://www.wayup.com/" target="_blank">WayUp</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>Industry-Specific Boards</h3>
-                <ul>
-                    <li><a href="https://wellfound.com/" target="_blank">Wellfound</a> (startups), <a href="https://builtin.com/" target="_blank">Built In</a> (tech hubs)</li>
-                    <li><a href="https://www.idealist.org/en" target="_blank">Idealist</a> (non-profits, social impact)</li>
-                    <li><a href="https://www.dice.com/" target="_blank">Dice</a> (tech/engineering)</li>
-                    <li><a href="https://archivesgig.com/" target="_blank">Archives Gig</a> (archives), <a href="https://www.usajobs.gov/" target="_blank">USA Jobs</a> (government)</li>
-                    <li><a href="https://www.teamworkonline.com/" target="_blank">TeamworkOnline</a> (sports &amp; entertainment)</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>Short-Term / Part-Time</h3>
-                <p>Many UMSI students pursue part-time work during their studies. Opportunities can be competitive, especially on campus, so start early and use multiple resources. Here are the main platforms to explore:</p>
-
-                <ul>
-                <li><a href="https://studentemployment.umich.edu/" target="_blank"><strong>Student Employment Site</strong></a> – Central hub for Work-Study and non-Work-Study positions. Jobs are updated continuously.</li>
-                <li><a href="https://si-umich.12twenty.com/Login" target="_blank"><strong>UMSI CareerLink</strong></a> – Search current postings, explore past postings under “Expired Jobs,” and set saved searches to get email alerts.</li>
-                <li><a href="https://www.lib.umich.edu/library-human-resources/student-employment" target="_blank"><strong>UM Library Jobs</strong></a> – Hourly roles across U-M libraries. Consider contacting specific libraries or subject specialists directly for opportunities.</li>
-                <li><a href="http://hr.umich.edu/acadhr/grads/index.html" target="_blank"><strong>Graduate Student Positions (GSI, GSRA, GSSA)</strong></a> – Teaching, research, and staff assistantships. Some positions are competitive and may not be widely posted—network with faculty for leads.</li>
-                <li><a href="https://careers.umich.edu/" target="_blank"><strong>U-M Careers</strong></a> – Search for part-time and contract work across the university.</li>
-                </ul>
-                For more information, please visit our <a href="https://docs.google.com/document/d/1cQybKz6QKjBNAhrowpeiXdb-7npnRBiWLQde6re-wOo/edit?tab=t.0" target="_blank">Searching for Part-Time and/or On-Campus Jobs</a> handout.
-                <br><br>
-                <p><strong>If you have an immediate need or you have any trouble accessing any of these links or resources, please email 539Instructors@umich.edu</strong></p>
-            </div>
-        </section>
-
-
-        <!-- ============= Section 3: International Students ============= -->
-        <section class="section_container" id="intl-students" tabindex="0">
-            <div>
-                <h2>3) Job Hunting for International Students</h2>
-                <p>
-                    International students can absolutely succeed in the U.S. market—just pair a strong search plan
-                    with visa awareness and targeted employers. Use the resources below and meet with a CDO coach
-                    and the U-M International Center to align strategy with work authorization.
-                </p>
-                <p>
-                    If you are new in job/internship searching, please go through our <a href="https://umich.instructure.com/courses/137916/files/25984219?module_item_id=2400763" target="_blank">[Handout] International Internships & Employment Resources</a> first to understand the overall process.
-                </p>
-            </div>
-
-            <div>
-                <h3>Key Resources</h3>
-                <ul>
-                    <li><a href="https://www.interstride.com/" target="_blank">Interstride</a> – employer insights, visa guidance, and global job postings (log in with U-M).</li>
-                    <li><a href="https://internationalcenter.umich.edu/abroad/swt/work/international-opportunities-fair" target="_blank">U-M International Center</a> – CPT/OPT workshops, travel &amp; work rules, advising.</li>
-                    <li><a href="https://online.goinglobal.com/" target="_blank">GoinGlobal</a> – country guides, application norms, and H-1B employer data.</li>
-                    <li><a href="https://mcompass.umich.edu/_portal/tds-program-brochure?programid=11361" target="_blank">UMSI Internship Grant</a> – funding support for qualifying international internships.</li>
-                    <li><a href="http://mcompass.umich.edu/" target="_blank">M-Compass</a> – international internship programs and funding opportunities.</li>
-                    <li>Third-party program providers (evaluate fit/quality): CRCC Asia, CEA, ISA, Sage Corps, CIEE, etc.</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>What to Watch</h3>
-                <ul>
-                    <li><strong>CPT/OPT timing:</strong> confirm eligibility windows and course requirements before accepting an offer.</li>
-                    <li><strong>Sponsorship signals:</strong> check H-1B history (e.g., employer databases/Interstride) and job descriptions for sponsorship language.</li>
-                    <li><strong>Application materials:</strong> tailor for the U.S. market (impact-focused resume, concise cover emails) or
-                    adjust to country-specific norms for global searches.</li>
-                    <li><strong>Networking first:</strong> warm outreach to alumni and affinity communities often beats cold applications.</li>
-                    <li><strong>Apply early for funding:</strong> UMSI and external grants (e.g., Rotary, Fulbright, CAORC) are competitive.</li>
-                </ul>
-            </div>
-
-            <p><em>Tip:</em> Keep a simple tracker for applications, sponsorship status, CPT/OPT notes, and follow-ups.
-                Bring it to coaching appointments so your coach can help you prioritize next steps.</p>
-        </section>
-    </main>
-    
-    <!-- Footer design referenced from the UMSI Career Development Office official website: https://www.si.umich.edu/student-experience/career-development -->
-    <footer class="footer_container" tabindex="0">
-        <!-- Left: Logo -->
-        <div class ="footer_logo">
-          <img src="images/UMSI_signature_vertical_U_blue.png" alt="University of Michigan School of Information logo">
+    <main class="container" id="main">
+      <section class="section_container" tabindex="0">
+        <h1>Job &amp; Internship Search</h1>
+        <div>
           <p>
-            &copy; Copyright 2025 Regents of the University of Michigan
+            Finding the right job or internship takes planning, preparation, and
+            the right tools. Use this page to learn how to structure your
+            search, discover where to find opportunities, and access resources
+            to make the process easier and more effective.
+          </p>
+
+          <p>
+            For a more complete and detailed set of job and internship search
+            resources&mdash;including workshop slides, handouts, and planning
+            templates&mdash;please visit our
+            <a
+              href="https://umich.instructure.com/courses/137916/modules#module_218605"
+              target="_blank"
+              >Career Exploration and Job/Internship Search module</a
+            >.
+          </p>
+          <img
+            src="images/UMSI_CareerFair_1.jpg"
+            alt="Students networking at a UMSI career fair"
+          />
+          <section class="features add_top_20_space">
+            <details class="accordion">
+              <summary>In this article</summary>
+              <a href="#plan-search">How to Plan Your Job/Internship Search</a
+              ><br />
+              <a href="#where-to-find-jobs">Where to Find Jobs</a><br />
+              <a href="#intl-students">Job Hunting for International Students</a
+              ><br />
+            </details>
+          </section>
+        </div>
+      </section>
+
+      <!-- STEP 1 -->
+      <section class="networking-steps section_container" tabindex="0">
+        <h2>The Job/Internship Process</h2>
+        <details class="step-card" id="plan-search">
+          <summary class="step-header">1. How to Plan Your Job/Internship Search</summary>
+          <div class="step-body">
+            <p>
+              Start with a strategy. Define your goals, map a timeline, prepare
+              materials, and track your progress. Focus beats volume—target roles,
+              industries, and locations that fit your skills and values.
+            </p>
+
+            <h4>Core Steps</h4>
+            <ol>
+              <li><strong>Set your direction:</strong> role(s), industry, location, and constraints (e.g., timeline, visa).</li>
+              <li><strong>Build your targets:</strong> make a company list (use a LAMP list if helpful) and prioritize outreach.</li>
+              <li><strong>Ready your materials:</strong> resume, LinkedIn, portfolio/GitHub, and a 30-second pitch.</li>
+              <li><strong>Schedule your search:</strong> block weekly time for applications + networking.</li>
+              <li><strong>Track everything:</strong> keep a spreadsheet or use CareerLink to log postings, contacts, and follow-ups.</li>
+              <li><strong>Iterate weekly:</strong> review results, refine targets, and ask a CDO coach for feedback.</li>
+            </ol>
+
+            <h4>Helpful Planning Resources (Canvas/CDO)</h4>
+            <ul>
+              <li><a href="https://docs.google.com/spreadsheets/d/1fT4YeP1M5moXtFYniTkyb-CCLV7PZ75B9iJFH-XWMv4/edit?gid=1589706144#gid=1589706144" target="_blank">Job Search Plan & Application Tracker</a></li>
+              <li><a href="https://docs.google.com/document/d/14Q3v3K5_SwgIAbkhCgyX9Vd3JPs9nR245ACvP3Csq5I/edit?tab=t.0" target="_blank">Recruiting Timeline</a></li>
+              <li><a href="https://docs.google.com/document/d/1fblfjC2Tki2MZOminwoIonvJYJ5tiBTKP8isaCzaIfY/edit?tab=t.0#heading=h.gjdgxs" target="_blank">Job & Internship Search Checklist</a></li>
+              <li><a href="https://docs.google.com/document/d/1_Mh2N-azjpH-WAf0Z6T51D6ag5ciYw4HpNwc0T6j_rM/edit?tab=t.0" target="_blank">Strategic Job & Internship Plan</a></li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- STEP 2 -->
+        <details class="step-card" id="where-to-find-jobs">
+          <summary class="step-header">2. Where to Find Jobs & Internships</summary>
+          <div class="step-body">
+            <p>
+              Combine UMSI-exclusive postings with broader platforms and industry-specific boards.
+              Don’t forget on-campus roles and micro-internships to build experience. For more information, visit
+              <a href="https://umich.instructure.com/courses/137916/pages/searching-for-job-and-slash-or-internship-postings" target="_blank">
+                Searching for Job and/or Internship Postings
+              </a>.
+            </p>
+            <ul>
+              <li><a href="https://si-umich.12twenty.com/Login" target="_blank">UMSI CareerLink</a></li>
+              <li><a href="https://careercenter.umich.edu/content/introducing-handshake" target="_blank">Handshake</a></li>
+              <li><a href="https://careers.umich.edu/" target="_blank">U-M Careers</a></li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- STEP 3 -->
+        <details class="step-card" id="intl-students">
+          <summary class="step-header">3. Job Hunting for International Students</summary>
+          <div class="step-body">
+            <p>
+              International students can absolutely succeed in the U.S. market—just pair a strong search plan with visa awareness and targeted employers.
+            </p>
+            <h4>Key Resources</h4>
+            <ul>
+              <li><a href="https://www.interstride.com/" target="_blank">Interstride</a></li>
+              <li><a href="https://internationalcenter.umich.edu/" target="_blank">U-M International Center</a></li>
+              <li><a href="https://online.goinglobal.com/" target="_blank">GoinGlobal</a></li>
+              <li><a href="https://mcompass.umich.edu/" target="_blank">M-Compass</a></li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <!-- ============= How to Plan ============= -->
+      <!-- <section class="section_container" id="plan-search" tabindex="0">
+        <div>
+          <h2>1) How to Plan Your Job/Internship Search</h2>
+          <p>
+            Start with a strategy. Define your goals, map a timeline, prepare
+            materials, and track your progress. Focus beats volume—target roles,
+            industries, and locations that fit your skills and values.
           </p>
         </div>
-        <!-- Center: Copyright & Address -->
-        <div class="footer_info">
-            <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a><br>
-            School of Information<br>
-            University of Michigan<br>
-            2200 Hayward Street<br>
-            Ann Arbor, MI 48109<br>
-            <a class="contact" href="mailto:539Instructors@umich.edu">Contact Us</a> |
-            <a class="privacy" href="https://umich.edu/privacy/">Privacy Statement</a>
+        <div>
+          <h3>Core Steps</h3>
+          <ol>
+            <li>
+              <strong>Set your direction:</strong> role(s), industry, location,
+              and constraints (e.g., timeline, visa).
+            </li>
+            <li>
+              <strong>Build your targets:</strong> make a company list (use a
+              LAMP list if helpful) and prioritize outreach.
+            </li>
+            <li>
+              <strong>Ready your materials:</strong> resume, LinkedIn,
+              portfolio/GitHub, and a 30-second pitch.
+            </li>
+            <li>
+              <strong>Schedule your search:</strong> block weekly time for
+              applications + networking.
+            </li>
+            <li>
+              <strong>Track everything:</strong> keep a spreadsheet or use
+              CareerLink to log postings, contacts, and follow-ups.
+            </li>
+            <li>
+              <strong>Iterate weekly:</strong> review results, refine targets,
+              and ask a CDO coach for feedback.
+            </li>
+          </ol>
         </div>
+
+        <div>
+          <h3>Helpful Planning Resources (Canvas/CDO)</h3>
+          <ul>
+            <li>
+              <a
+                href="https://docs.google.com/spreadsheets/d/1fT4YeP1M5moXtFYniTkyb-CCLV7PZ75B9iJFH-XWMv4/edit?gid=1589706144#gid=1589706144"
+                target="_blank"
+                >Job Search Plan &amp; Application Tracker</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://docs.google.com/document/d/14Q3v3K5_SwgIAbkhCgyX9Vd3JPs9nR245ACvP3Csq5I/edit?tab=t.0"
+                target="_blank"
+                >Recruiting Timeline</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://docs.google.com/document/d/1fblfjC2Tki2MZOminwoIonvJYJ5tiBTKP8isaCzaIfY/edit?tab=t.0#heading=h.gjdgxs"
+                target="_blank"
+                >Job &amp; Internship Search Checklist</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://docs.google.com/document/d/1_Mh2N-azjpH-WAf0Z6T51D6ag5ciYw4HpNwc0T6j_rM/edit?tab=t.0"
+                target="_blank"
+                >Strategic Job &amp; Internship Plan</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section> -->
+
+      <!-- ============= Where to Find Jobs ============= -->
+      <!-- <section class="section_container" id="where-to-find-jobs" tabindex="0">
+        <div>
+          <h2>2) Where to Find Jobs &amp; Internships</h2>
+          <p>
+            Combine UMSI-exclusive postings with broader platforms and
+            industry-specific boards. Don’t forget on-campus roles and
+            micro-internships to build experience. For more information, visit
+            our
+            <a
+              href="https://umich.instructure.com/courses/137916/pages/searching-for-job-and-slash-or-internship-postings"
+              target="_blank"
+              >Searching for Job and/or Internship Postings</a
+            >
+            canvas page.
+          </p>
+        </div>
+
+        <div>
+          <h3>UMSI / U-M Platforms</h3>
+          <ul>
+            <li>
+              <a href="https://si-umich.12twenty.com/Login" target="_blank"
+                >UMSI CareerLink</a
+              >
+              – exclusive postings, employer events, and on-campus recruiting.
+            </li>
+            <li>
+              <a
+                href="https://careercenter.umich.edu/content/introducing-handshake"
+                target="_blank"
+                >Handshake</a
+              >
+              – U-M student jobs/internships across campus and beyond.
+            </li>
+            <li>
+              <a href="https://careers.umich.edu/" target="_blank"
+                >U-M Careers</a
+              >
+              – The official site for U-M student employment, offering roles
+              across departments, research labs, and administrative offices.
+            </li>
+            <li>
+              <a href="https://studentemployment.umich.edu/" target="_blank"
+                >Student Employment Site</a
+              >,
+              <a href="https://its.umich.edu/student-jobs/" target="_blank"
+                >ITS Student Roles</a
+              >,
+              <a href="https://ai.umich.edu/students" target="_blank"
+                >CAI Student Roles</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Large Job Boards</h3>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/home" target="_blank"
+                >LinkedIn Jobs</a
+              >
+            </li>
+            <li>
+              <a href="https://www.indeed.com/" target="_blank">Indeed</a>
+            </li>
+            <li>
+              <a
+                href="https://www.google.com/search?q=jobs+near+me&ibp=htl;jobs&sa=X&ved=2ahUKEwj867rGg8qGAxW8vokEHYB3N5AQutcGKAF6BAgbEAQ#htivrt=jobs&htidocid=ZbnOLw9I22qRm3pLAAAAAA%3D%3D&fpstate=tldetail"
+                target="_blank"
+                >Google Jobs</a
+              >
+            </li>
+            <li><a href="https://www.wayup.com/" target="_blank">WayUp</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Industry-Specific Boards</h3>
+          <ul>
+            <li>
+              <a href="https://wellfound.com/" target="_blank">Wellfound</a>
+              (startups),
+              <a href="https://builtin.com/" target="_blank">Built In</a> (tech
+              hubs)
+            </li>
+            <li>
+              <a href="https://www.idealist.org/en" target="_blank">Idealist</a>
+              (non-profits, social impact)
+            </li>
+            <li>
+              <a href="https://www.dice.com/" target="_blank">Dice</a>
+              (tech/engineering)
+            </li>
+            <li>
+              <a href="https://archivesgig.com/" target="_blank"
+                >Archives Gig</a
+              >
+              (archives),
+              <a href="https://www.usajobs.gov/" target="_blank">USA Jobs</a>
+              (government)
+            </li>
+            <li>
+              <a href="https://www.teamworkonline.com/" target="_blank"
+                >TeamworkOnline</a
+              >
+              (sports &amp; entertainment)
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Short-Term / Part-Time</h3>
+          <p>
+            Many UMSI students pursue part-time work during their studies.
+            Opportunities can be competitive, especially on campus, so start
+            early and use multiple resources. Here are the main platforms to
+            explore:
+          </p>
+
+          <ul>
+            <li>
+              <a href="https://studentemployment.umich.edu/" target="_blank"
+                ><strong>Student Employment Site</strong></a
+              >
+              – Central hub for Work-Study and non-Work-Study positions. Jobs
+              are updated continuously.
+            </li>
+            <li>
+              <a href="https://si-umich.12twenty.com/Login" target="_blank"
+                ><strong>UMSI CareerLink</strong></a
+              >
+              – Search current postings, explore past postings under “Expired
+              Jobs,” and set saved searches to get email alerts.
+            </li>
+            <li>
+              <a
+                href="https://www.lib.umich.edu/library-human-resources/student-employment"
+                target="_blank"
+                ><strong>UM Library Jobs</strong></a
+              >
+              – Hourly roles across U-M libraries. Consider contacting specific
+              libraries or subject specialists directly for opportunities.
+            </li>
+            <li>
+              <a
+                href="http://hr.umich.edu/acadhr/grads/index.html"
+                target="_blank"
+                ><strong
+                  >Graduate Student Positions (GSI, GSRA, GSSA)</strong
+                ></a
+              >
+              – Teaching, research, and staff assistantships. Some positions are
+              competitive and may not be widely posted—network with faculty for
+              leads.
+            </li>
+            <li>
+              <a href="https://careers.umich.edu/" target="_blank"
+                ><strong>U-M Careers</strong></a
+              >
+              – Search for part-time and contract work across the university.
+            </li>
+          </ul>
+          For more information, please visit our
+          <a
+            href="https://docs.google.com/document/d/1cQybKz6QKjBNAhrowpeiXdb-7npnRBiWLQde6re-wOo/edit?tab=t.0"
+            target="_blank"
+            >Searching for Part-Time and/or On-Campus Jobs</a
+          >
+          handout. <br /><br />
+          <p>
+            <strong
+              >If you have an immediate need or you have any trouble accessing
+              any of these links or resources, please email
+              539Instructors@umich.edu</strong
+            >
+          </p>
+        </div>
+      </section> -->
+
+      <!-- ============= Section 3: International Students ============= -->
+      <!-- <section class="section_container" id="intl-students" tabindex="0">
+        <div>
+          <h2>3) Job Hunting for International Students</h2>
+          <p>
+            International students can absolutely succeed in the U.S.
+            market—just pair a strong search plan with visa awareness and
+            targeted employers. Use the resources below and meet with a CDO
+            coach and the U-M International Center to align strategy with work
+            authorization.
+          </p>
+          <p>
+            If you are new in job/internship searching, please go through our
+            <a
+              href="https://umich.instructure.com/courses/137916/files/25984219?module_item_id=2400763"
+              target="_blank"
+              >[Handout] International Internships & Employment Resources</a
+            >
+            first to understand the overall process.
+          </p>
+        </div>
+
+        <div>
+          <h3>Key Resources</h3>
+          <ul>
+            <li>
+              <a href="https://www.interstride.com/" target="_blank"
+                >Interstride</a
+              >
+              – employer insights, visa guidance, and global job postings (log
+              in with U-M).
+            </li>
+            <li>
+              <a
+                href="https://internationalcenter.umich.edu/abroad/swt/work/international-opportunities-fair"
+                target="_blank"
+                >U-M International Center</a
+              >
+              – CPT/OPT workshops, travel &amp; work rules, advising.
+            </li>
+            <li>
+              <a href="https://online.goinglobal.com/" target="_blank"
+                >GoinGlobal</a
+              >
+              – country guides, application norms, and H-1B employer data.
+            </li>
+            <li>
+              <a
+                href="https://mcompass.umich.edu/_portal/tds-program-brochure?programid=11361"
+                target="_blank"
+                >UMSI Internship Grant</a
+              >
+              – funding support for qualifying international internships.
+            </li>
+            <li>
+              <a href="http://mcompass.umich.edu/" target="_blank">M-Compass</a>
+              – international internship programs and funding opportunities.
+            </li>
+            <li>
+              Third-party program providers (evaluate fit/quality): CRCC Asia,
+              CEA, ISA, Sage Corps, CIEE, etc.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>What to Watch</h3>
+          <ul>
+            <li>
+              <strong>CPT/OPT timing:</strong> confirm eligibility windows and
+              course requirements before accepting an offer.
+            </li>
+            <li>
+              <strong>Sponsorship signals:</strong> check H-1B history (e.g.,
+              employer databases/Interstride) and job descriptions for
+              sponsorship language.
+            </li>
+            <li>
+              <strong>Application materials:</strong> tailor for the U.S. market
+              (impact-focused resume, concise cover emails) or adjust to
+              country-specific norms for global searches.
+            </li>
+            <li>
+              <strong>Networking first:</strong> warm outreach to alumni and
+              affinity communities often beats cold applications.
+            </li>
+            <li>
+              <strong>Apply early for funding:</strong> UMSI and external grants
+              (e.g., Rotary, Fulbright, CAORC) are competitive.
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          <em>Tip:</em> Keep a simple tracker for applications, sponsorship
+          status, CPT/OPT notes, and follow-ups. Bring it to coaching
+          appointments so your coach can help you prioritize next steps.
+        </p>
+      </section> -->
+    </main>
+
+    <!-- Footer design referenced from the UMSI Career Development Office official website: https://www.si.umich.edu/student-experience/career-development -->
+    <footer class="footer_container" tabindex="0">
+      <!-- Left: Logo -->
+      <div class="footer_logo">
+        <img
+          src="images/UMSI_signature_vertical_U_blue.png"
+          alt="University of Michigan School of Information logo"
+        />
+        <p>
+          &copy; Copyright <span id="year"></span> Regents of the University of
+          Michigan
+        </p>
+      </div>
+      <!-- Center: Copyright & Address -->
+      <div class="footer_info">
+        <a href="https://umich.instructure.com/courses/137916"
+          >UMSI Career Development Office </a
+        ><br />
+        <p>
+          School of Information University of Michigan 2200 Hayward Street Ann
+          Arbor, MI 48109
+        </p>
+        <a class="contact" href="mailto:539Instructors@umich.edu">Contact Us</a>
+        |
+        <a class="privacy" href="https://umich.edu/privacy/"
+          >Privacy Statement</a
+        >
+      </div>
     </footer>
-
-</body>
-
+  </body>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    console.log("copyright show up?");
+  </script>
 </html>

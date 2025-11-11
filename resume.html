@@ -1,191 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/html5reset.css">
-    <link rel="stylesheet" href="css/starter_style.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>Resumes</title>
-</head>
-<body>
-  <div class="skip"><a href="#main">Skip to Main Content</a></div>
-  <header>
-    <div class="header_style">
-      <a href="home.html"><img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo"></a>
-    </div>
-    <nav class="nav_style">
-      <ul>
-        <li class="nav_item"><a href="home.html">Home</a></li>
-        <li class="nav_item"><a href="resume.html">Resumes</a></li>
-        <li class="nav_item"><a href="networking.html">Networking & Connections</a></li>
-        <li class="nav_item"><a href="job_search.html">Job/Internship Search</a></li>
-      </ul>
-    </nav>
-  </header>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/html5reset.css" />
+    <link rel="stylesheet" href="css/starter_style.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MSI Career Development Resource Hub</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <header>
+      <div class="header">
+        <!-- menu -->
+        <button id="open-sidebar-button" onclick="openSidebar()">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+        <!-- logo -->
+        <a href="home.html" class="logo">
+          <!-- <img
+            src="images/UMSI_signature_vertical_informal_solidblue.jpg"
+            alt="UMSI Logo"
+          /> -->
+          <picture>
+            <!-- 桌機版：螢幕寬度 >= 900px 時使用 -->
+            <source
+              media="(min-width: 1000px)"
+              srcset="images/UMSI_signature_marketing_U_white.png"
+            />
 
-  <main class="container" id = "main">
-    <section class="section_container" tabindex="0">
-      <h1>Resume Resources for UMSI Students</h1>
+            <!-- 手機版：預設顯示 -->
+            <img
+              src="images/UMSI_signature_vertical_informal_solidblue.jpg"
+              alt="UMSI Logo"
+            />
+          </picture>
+        </a>
+
+        <!-- nav -->
+        <nav id="navbar">
+          <ul>
+            <li>
+              <button id="close-sidebar-button" onclick="closeSidebar()">
+                <span class="material-symbols-rounded">close</span>
+              </button>
+            </li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="resume.html">Resumes</a></li>
+            <li><a href="networking.html">Networking & Connections</a></li>
+            <li class="">
+              <a href="job_search.html">Job/Internship Search</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" id="main">
+      <section class="section_container" tabindex="0">
+        <h1>Resume Resources for UMSI Students</h1>
         <!-- Image source: Unsplash (https://unsplash.com/photos/white-printer-paper-beside-silver-laptop-computer-7iSEHWsxPLw) -->
-      <img src="images/resume.jpg" alt="a resume image with laptop">
-      <h2>Craft a Resume that Tells Your Story</h2>
-      <p>
-        Your resume is often your first impression—an opportunity to highlight your unique strengths, skills, and experiences to potential employers. Whether you’re starting from scratch or looking to polish an existing resume, these resources are here to help you every step of the way.
-      </p>
-      <p>
-        UMSI students are in high demand, and a clear, well-organized resume will help you stand out among applicants. On this page, you'll find practical tips, templates, and guides—all tailored to the needs of School of Information students and aligned with employer expectations.
-      </p>
-      <p>
-        Need feedback? You can always <a href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach" target="_blank">meet with a CDO Career Coach</a> to review your materials.
-      <br><br><strong>For a more complete and detailed set of resumes and other application materials(Resume, Cover Letter, LinkedIn Profile, Portfolio) resources 
-, please visit our CDO Canvas <a href="https://umich.instructure.com/courses/137916/modules#module_218605" target="_blank">Application Materials</a> module.</strong>
-      </p>
-      <ul>
-        <li>
-          <a href="#steps">Resume Writing Made Easy: Steps to Success</a>
-        </li>
-        <li>
-          <a href="#resources">Resume Resources</a>
-        </li>
-        <li>
-          <a href="#timeline">Resume Timeline Guidance for Grad Students</a>
-        </li>
-        <li>
-          <a href="#FAQ">Resume FAQ</a>
-        </li>
-      </ul>
-    </section>
+        <img src="images/resume.jpg" alt="a resume image with laptop" />
+        <h2>Craft a Resume that Tells Your Story</h2>
+        <p>
+          Your resume is often your first impression—an opportunity to highlight
+          your unique strengths, skills, and experiences to potential employers.
+          Whether you’re starting from scratch or looking to polish an existing
+          resume, these resources are here to help you every step of the way.
+        </p>
+        <p>
+          UMSI students are in high demand, and a clear, well-organized resume
+          will help you stand out among applicants. On this page, you'll find
+          practical tips, templates, and guides—all tailored to the needs of
+          School of Information students and aligned with employer expectations.
+        </p>
+        <p>
+          Need feedback? You can always
+          <a
+            href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach"
+            target="_blank"
+            >meet with a CDO Career Coach</a
+          >
+          to review your materials. <br /><br />For a more complete and detailed
+          set of resumes and other application materials(Resume, Cover Letter,
+          LinkedIn Profile, Portfolio) resources , please visit our CDO Canvas
+          <a
+            href="https://umich.instructure.com/courses/137916/modules#module_218605"
+            target="_blank"
+            >Application Materials</a
+          >
+          module.
+        </p>
+        <section class="features add_top_20_space">
+          <details class="accordion">
+            <summary>In this article</summary>
+            <a href="#steps">Resume Writing Made Easy: Steps to Success</a
+            ><br />
+            <a href="#resources">Resume Resources</a><br />
+            <a href="#timeline">Resume Timeline Guidance for Grad Students</a
+            ><br />
+            <a href="#FAQ">Resume FAQ</a><br />
+          </details>
+        </section>
+      </section>
 
-    <section class="section_container" id="steps" tabindex="0">
-      <h2>Resume Writing Made Easy: Steps to Success</h2>
-      <ol>
-        <li><strong>Download a UMSI-Approved Template:</strong> Start with a format that works—no need to design from scratch.</li>
-        <li><strong>Gather Your Experiences:</strong> List jobs, internships, volunteer roles, coursework, and projects most relevant to your goals.</li>
-        <li><strong>Write Impactful Bullets:</strong> Use action verbs and highlight your skills, results, and unique contributions.</li>
-        <li><strong>Tailor for Each Opportunity:</strong> Customize your resume for every job or internship you pursue.</li>
-        <li><strong>Review and Edit:</strong> Proofread for errors, check formatting, and ask for feedback from peers or a career coach.</li>
-      </ol>
-    </section>
+      <section class="section_container" id="steps" tabindex="0">
+        <div class="resume-steps">
+          <h2>Resume Writing Made Easy: Steps to Success</h2>
+          <div class="step" tabindex="0">
+            <div class="step-left">
+              <span class="step-num">1</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Download a UMSI-Approved Template:</strong> Start with a
+                format that works—no need to design from scratch.
+              </p>
+            </div>
+          </div>
+          <div class="step" tabindex="0">
+            <div class="step-left">
+              <span class="step-num">2</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Gather Your Experiences:</strong>
+                List jobs, internships, volunteer roles, coursework, and
+                projects most relevant to your goals.
+              </p>
+            </div>
+          </div>
 
-    <section class="section_container" id="resources" tabindex="0">
-      <h2>Resume Resources</h2>
-      <ul>
-        <li>
-          <a href="https://docs.google.com/document/d/1_1GfDJyVGIgE82MZjVhuWT_aB_2Hcj1NN62FUCXoR_o/edit?tab=t.0" target="_blank">
-            UMSI Resume Guide and Rubric
-          </a> <br>
-          Comprehensive UMSI guide including tips, formatting rules, and sample accomplishments.
-        </li>
-        <li>
-          <a href="https://docs.google.com/document/d/1-EVZYH_Fic4mfLVGOXyHTSeRwBWmmi2WHSgGDLGGPEs/edit?tab=t.0" target="_blank">
-            Writing Effective Resume Bullets
-          </a> <br>
-          Learn how to describe your work and impact in ways employers notice.
-        </li>
-        <li>
-          <a href="https://umsi.instructure.com/courses/12345/pages/resume-rubric" target="_blank">
-            Resume Rubric
-          </a> <br>
-          Evaluate your resume using the same criteria as UMSI’s Career Development Office.
-        </li>
-        <li>
-          <a href="https://docs.google.com/document/d/1vJMfgw9nwpHN9Sy0L0RP0aNBbaDSsiLPc2vy-doac6s/edit?tab=t.0" target="_blank">
-            Application Materials: Workshops and More
-          </a> <br>
-          Attend a Resume Refresh workshop, review video tutorials, or access additional templates.
-        </li>
-        <li>
-          <a href="https://docs.google.com/presentation/d/1q0hzNdFADei-jnFNWXYSWdvDsFPNojXcdaPadQQTUgg/edit?slide=id.g14784933fca_0_1422#slide=id.g14784933fca_0_1422" target="_blank">
-            Resume Refresh Workshop
-          </a> <br>
-          Key tips for crafting a strong resume that highlights your skills, experience, and accomplishments to stand out to employers.
-        </li>
-      </ul>
-      <p>
-        Ready for review? <a href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach" target="_blank">Book a resume review appointment with a CDO Career Coach</a>.
-      </p>
-    </section>
+          <div class="step" tabindex="0">
+            <div class="step-left">
+              <span class="step-num">3</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Write Impactful Bullets:</strong>
+                Use action verbs and highlight your skills, results, and unique
+                contributions.
+              </p>
+            </div>
+          </div>
 
-    <section class="section_container" id="timeline" tabindex="0">
-      <h2>Resume Timeline Guidance for Master’s Students</h2>
-      <!-- Image source: Unsplash (https://unsplash.com/photos/a-calendar-with-red-push-buttons-pinned-to-it-bwOAixLG0uc) -->
-      <img src="images/calender.jpg" alt="Calendar with red push pins">
-      <h3>First Semester (Fall, Year 1)</h3>
-      <ul>
-        <li>Start building your resume right away—include relevant coursework, class projects, and past internships/work experience.</li>
-        <li>Visit the Career Development Office (CDO) early for a resume review. It’s much easier to polish from the start than to fix everything later.</li>
-        <li>Join student orgs or volunteer opportunities and start tracking your contributions—you’ll want those bullets on your resume.</li>
-      </ul>
-      <h3>Second Semester (Winter, Year 1)</h3>
-      <ul>
-        <li>Update your resume with new projects, research, or internships secured during the academic year.</li>
-        <li>Tailor your resume toward summer internship applications—highlight technical, research, or UX skills relevant to your field.</li>
-        <li>Attend a Resume Refresh workshop or a peer review session to get feedback from multiple perspectives.</li>
-      </ul>
-      <h3>Summer (Between Year 1 &amp; 2)</h3>
-      <ul>
-        <li>Add your internship experience as soon as it starts—don’t wait until the end.</li>
-        <li>Capture impact by tracking metrics, tools used, and outcomes. These details are fresh now but easy to forget later.</li>
-        <li>If you don’t have an internship, focus on projects, research assistantships, or independent work that show practical application of skills.</li>
-      </ul>
-      <h3>Final Year (Fall &amp; Winter, Year 2)</h3>
-      <ul>
-        <li>Refine your resume for full-time job applications—tailor each version to match the job description.</li>
-        <li>Make sure your bullets emphasize outcomes (numbers, efficiency gained, impact made), not just tasks.</li>
-        <li>Keep it concise: one page is ideal for most Master’s students.</li>
-        <li>Schedule a final review with a CDO career coach before submitting applications.</li>
-      </ul>
-      <p>Pro Tip: Treat your resume as a living document—update it every semester, after every major project, and after every new role.</p>
-    </section>
+          <div class="step" tabindex="0">
+            <div class="step-left">
+              <span class="step-num">4</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Tailor for Each Opportunity:</strong>
+                Customize your resume for every job or internship you pursue.
+              </p>
+            </div>
+          </div>
 
-    <section class="section_container" id="FAQ" tabindex="0">
-      <h2>Resume FAQ</h2>
-      <ul>
-        <li>
-          <strong>How long should my resume be?</strong><br>
-          For most UMSI students and new grads, one page is best. More experienced professionals may require two pages.
-        </li>
-        <li>
-          <strong>Do I need a different resume for each application?</strong><br>
-          It’s wise to tailor your resume to the requirements and keywords of each opportunity.
-        </li>
-        <li>
-          <strong>Is it okay to include coursework or student projects?</strong><br>
-          Absolutely! UMSI coursework and projects are valued by employers, especially if they show relevant skills and impact.
-        </li>
-        <li>
-          <strong>How often should I update my resume?</strong><br>
-          Update your resume every semester, after major projects, or whenever you gain a new role or responsibility.
-        </li>
-      </ul>
-    </section>
-  </main>
+          <div class="step" tabindex="0">
+            <div class="step-left">
+              <span class="step-num">5</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Review and Edit:</strong>
+                Proofread for errors, check formatting, and ask for feedback
+                from peers or a career coach.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- resume Resources -->
+      <section class="section_container" id="resources">
+        <div tabindex="0">
+          <h2>Resume Resources</h2>
+          <section class="features">
+            <a
+              href="https://docs.google.com/document/d/1_1GfDJyVGIgE82MZjVhuWT_aB_2Hcj1NN62FUCXoR_o/edit?tab=t.0"
+              target="_blank"
+              class="feature-link"
+            >
+              <div class="feature-card">
+                <h3 class="add_bottom_10_space">
+                  UMSI Resume Guide and Rubric
+                </h3>
+                <p>
+                  Comprehensive UMSI guide including tips, formatting rules, and
+                  sample accomplishments.
+                </p>
+              </div>
+            </a>
 
-  <!-- Footer design referenced from the UMSI Career Development Office official website: https://www.si.umich.edu/student-experience/career-development -->
-  <footer class="footer_container" tabindex="0">
-        <!-- Left: Logo -->
-        <div class ="footer_logo">
-          <img src="images/UMSI_signature_vertical_U_blue.png" alt="University of Michigan School of Information logo">
+            <a
+              href="https://docs.google.com/document/d/1-EVZYH_Fic4mfLVGOXyHTSeRwBWmmi2WHSgGDLGGPEs/edit?tab=t.0"
+              target="_blank"
+              class="feature-link"
+            >
+              <div class="feature-card">
+                <h3 class="add_bottom_10_space">
+                  Writing Effective Resume Bullets
+                </h3>
+                <p>
+                  Learn how to describe your work and impact in ways employers
+                  notice.
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://umsi.instructure.com/courses/12345/pages/resume-rubric"
+              target="_blank"
+              class="feature-link"
+            >
+              <div class="feature-card">
+                <h3 class="add_bottom_10_space">Resume Rubric</h3>
+                <p>
+                  Evaluate your resume using the same criteria as UMSI’s Career
+                  Development Office.
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://docs.google.com/document/d/1vJMfgw9nwpHN9Sy0L0RP0aNBbaDSsiLPc2vy-doac6s/edit?tab=t.0"
+              target="_blank"
+              class="feature-link"
+            >
+              <div class="feature-card">
+                <h3 class="add_bottom_10_space">
+                  Application Materials: Workshops and More
+                </h3>
+                <p>
+                  Attend a Resume Refresh workshop, review video tutorials, or
+                  access additional templates.
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://docs.google.com/presentation/d/1q0hzNdFADei-jnFNWXYSWdvDsFPNojXcdaPadQQTUgg/edit?slide=id.g14784933fca_0_1422#slide=id.g14784933fca_0_1422"
+              target="_blank"
+              class="feature-link"
+            >
+              <div class="feature-card">
+                <h3 class="add_bottom_10_space">Resume Refresh Workshop</h3>
+                <p>
+                  Key tips for crafting a strong resume that highlights your
+                  skills, experience, and accomplishments to stand out to
+                  employers.
+                </p>
+              </div>
+            </a>
+          </section>
+        </div>
+        <div class="add_top_10_space">
           <p>
-            &copy; Copyright 2025 Regents of the University of Michigan
+            Ready for review?
+            <a
+              href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach"
+              target="_blank"
+              >Book a resume review appointment with a CDO Career Coach</a
+            >.
           </p>
         </div>
-        <!-- Center: Copyright & Address -->
-        <div class="footer_info">
-          <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a><br>
-          School of Information<br>
-          University of Michigan<br>
-          2200 Hayward Street<br>
-          Ann Arbor, MI 48109<br>
-          <a class="contact" href="mailto:539Instructors@umich.edu">Contact Us</a> |
-          <a class="privacy" href="https://umich.edu/privacy/">Privacy Statement</a>
+      </section>
+      <!-- Resumen Timeline start-->
+      <section class="section_container timeline-section" id="timeline">
+        <h2>Resume Timeline Guidance for Master's Students</h2>
+        <div class="timeline">
+          <details class="timeline-item" open>
+            <summary>
+              <span class="dot"></span>
+              <span class="semester">Fall, Year 1</span>
+            </summary>
+            <div class="timeline-content">
+              <ul>
+                <li>
+                  Start building your resume right away—include relevant
+                  coursework, class projects, and past internships/work
+                  experience.vant coursework, class projects, and work
+                  experience.
+                </li>
+                <li>
+                  Visit the Career Development Office (CDO) early for a resume
+                  review. It’s much easier to polish from the start than to fix
+                  everything later.
+                </li>
+                <li>
+                  Join student orgs or volunteer opportunities and start
+                  tracking your contributions—you’ll want those bullets on your
+                  resume.
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="timeline-item">
+            <summary>
+              <span class="dot"></span>
+              <span class="semester">Winter, Year 1</span>
+            </summary>
+            <div class="timeline-content">
+              <ul>
+                <li>
+                  Update your resume with new projects, research, or internships
+                  secured during the academic year.
+                </li>
+                <li>
+                  Tailor your resume toward summer internship
+                  applications—highlight technical, research, or UX skills
+                  relevant to your field.
+                </li>
+                <li>
+                  Attend a Resume Refresh workshop or a peer review session to
+                  get feedback from multiple perspectives.
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="timeline-item">
+            <summary>
+              <span class="dot"></span>
+              <span class="semester">Summer, Year 1</span>
+            </summary>
+            <div class="timeline-content">
+              <ul>
+                <li>
+                  Add your internship experience as soon as it starts—don’t wait
+                  until the end.
+                </li>
+                <li>
+                  Capture impact by tracking metrics, tools used, and outcomes.
+                  These details are fresh now but easy to forget later.
+                </li>
+                <li>
+                  If you don’t have an internship, focus on projects, research
+                  assistantships, or independent work that show practical
+                  application of skills.
+                </li>
+              </ul>
+            </div>
+          </details>
+          <details class="timeline-item">
+            <summary>
+              <span class="dot"></span>
+              <span class="semester">Fall/Winter, Year 2</span>
+            </summary>
+            <div class="timeline-content">
+              <ul>
+                <li>
+                  Refine your resume for full-time job applications—tailor each
+                  version to match the job description.
+                </li>
+                <li>
+                  Make sure your bullets emphasize outcomes (numbers, efficiency
+                  gained, impact made), not just tasks.
+                </li>
+                <li>
+                  Keep it concise: one page is ideal for most Master’s students.
+                </li>
+                <li>
+                  Schedule a final review with a CDO career coach before
+                  submitting applications.
+                </li>
+              </ul>
+            </div>
+          </details>
         </div>
-  </footer>
+        <p>
+          Pro Tip: Treat your resume as a living document. Update it every
+          semester, after every major project, and after every new role.
+        </p>
+      </section>
+      <!-- Resumen Timeline end-->
 
-</body>
+      <!-- Resumen F&Q start-->
+      <section class="faq section_container" id="FAQ" tabindex="0">
+        <h2>Resume FAQ</h2>
+        <div class="faq-item">
+          <h3 class="question">How long should my resume be?</h3>
+          <p class="answer">
+            For most UMSI students and new grads, one page is best. More
+            experienced professionals may require two pages.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3 class="question">Do I need a different resume for each application?</h3>
+          <p class="answer">
+            It’s wise to tailor your resume to the requirements and keywords of
+            each opportunity.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3 class="question">Is it okay to include coursework or student projects?</h3>
+          <p class="answer">
+            Absolutely! UMSI coursework and projects are valued by employers,
+            especially if they show relevant skills and impact.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3 class="question">How often should I update my resume?</h3>
+          <p class="answer">
+             Update your resume every semester, after major projects, or whenever
+            you gain a new role or responsibility.
+          </p>
+        </div>
+      </section>
+      <!-- Resumen F&Q end-->
+    </main>
 
+    <!-- Footer design referenced from the UMSI Career Development Office official website: https://www.si.umich.edu/student-experience/career-development -->
+    <footer class="footer_container" tabindex="0">
+      <!-- Left: Logo -->
+      <div class="footer_logo">
+        <img
+          src="images/UMSI_signature_vertical_U_blue.png"
+          alt="University of Michigan School of Information logo"
+        />
+        <p>
+          &copy; Copyright <span id="year"></span> Regents of the University of
+          Michigan
+        </p>
+      </div>
+      <!-- Center: Copyright & Address -->
+      <div class="footer_info">
+        <a href="https://umich.instructure.com/courses/137916"
+          >UMSI Career Development Office </a
+        ><br />
+        <p>
+          School of Information University of Michigan 2200 Hayward Street Ann
+          Arbor, MI 48109
+        </p>
+        <a class="contact" href="mailto:539Instructors@umich.edu">Contact Us</a>
+        |
+        <a class="privacy" href="https://umich.edu/privacy/"
+          >Privacy Statement</a
+        >
+      </div>
+    </footer>
+  </body>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    console.log("copyright show up?");
+  </script>
 </html>

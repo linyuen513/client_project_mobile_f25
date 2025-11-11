@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/html5reset.css" />
+    <link rel="stylesheet" href="css/starter_style.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MSI Career Development Resource Hub</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <header>
+      <div class="header">
+        <!-- menu -->
+        <button id="open-sidebar-button" onclick="openSidebar()">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+        <!-- logo -->
+        <a href="home.html" class="logo">
+          <!-- <img
+            src="images/UMSI_signature_vertical_informal_solidblue.jpg"
+            alt="UMSI Logo"
+          /> -->
+          <picture>
+            <!-- 桌機版：螢幕寬度 >= 900px 時使用 -->
+            <source
+              media="(min-width: 1000px)"
+              srcset="images/UMSI_signature_marketing_U_white.png"
+            />
+
+            <!-- 手機版：預設顯示 -->
+            <img
+              src="images/UMSI_signature_vertical_informal_solidblue.jpg"
+              alt="UMSI Logo"
+            />
+          </picture>
+        </a>
+
+        <!-- nav -->
+        <nav id="navbar">
+          <ul>
+            <li>
+              <button id="close-sidebar-button" onclick="closeSidebar()">
+                <span class="material-symbols-rounded">close</span>
+              </button>
+            </li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="resume.html">Resumes</a></li>
+            <li><a href="networking.html">Networking & Connections</a></li>
+            <li class="">
+              <a href="job_search.html">Job/Internship Search</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" id="main">
+      <section class="section_container err_page">
+        <div tabindex="0">
+          <h1>404</h1>
+          <h2>Oops! We couldn’t find that page.</h2>
+          <p>
+            It looks like the page you were looking for has gone on a coffee
+            break. Don’t worry — let’s get you back on track!
+          </p>
+        </div>
+        <div class="cta">
+            <p>Can’t find what you’re looking for? Leave us a message below</p>
+            <form class="message-form" action="https://formspree.io/f/xvgdowzq" method="POST">
+            <textarea
+                name="message"
+                placeholder="Tell us what you were hoping to find..."
+                required
+            ></textarea>
+            <button type="submit">Send Message</button>
+            </form>
+        </div>
+      </section>
+    </main>
+    <!-- Footer design referenced from the UMSI Career Development Office official website: https://www.si.umich.edu/student-experience/career-development -->
+    <footer class="footer_container" tabindex="0">
+      <!-- Left: Logo -->
+      <div class="footer_logo">
+        <img
+          src="images/UMSI_signature_vertical_U_blue.png"
+          alt="University of Michigan School of Information logo"
+        />
+        <p>
+          &copy; Copyright <span id="year"></span> Regents of the University of
+          Michigan
+        </p>
+      </div>
+      <!-- Center: Copyright & Address -->
+      <div class="footer_info">
+        <a href="https://umich.instructure.com/courses/137916"
+          >UMSI Career Development Office </a
+        ><br />
+        <p>
+          School of Information University of Michigan 2200 Hayward Street Ann
+          Arbor, MI 48109
+        </p>
+        <a class="contact" href="mailto:539Instructors@umich.edu">Contact Us</a>
+        |
+        <a class="privacy" href="https://umich.edu/privacy/"
+          >Privacy Statement</a
+        >
+      </div>
+    </footer>
+  </body>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    console.log("copyright show up?");
+  </script>
+</html>
